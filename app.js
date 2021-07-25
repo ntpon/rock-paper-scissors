@@ -17,19 +17,25 @@ let playerPoint = 0;
 let computerPoint = 0;
 const items = ['rock', 'scissors', 'paper'];
 
-function gemeLoop(item) {
-  let playerChoosed, computerChoosed;
-  playerChoosed = item;
-  computerChoosed = items[Number.parseInt(Math.random() * 3)];
-  let whowin;
-  noItem.innerHTML = `<img src="./images/${computerChoosed}.svg">`;
+function gemeLoop(playerChoosed) {
+  let computerChoosed;
+
+  // All Button none
   btnRock.style.display = 'none';
   btnPaper.style.display = 'none';
   btnScissors.style.display = 'none';
+
+  // Set Image Show for Player
   const img = document.createElement('img');
   img.src = `./images/${playerChoosed}.svg`;
   playerSectopn.append(img);
 
+  // Set Image Show for Computer
+  computerChoosed = items[Number.parseInt(Math.random() * 3)];
+  noItem.innerHTML = `<img src="./images/${computerChoosed}.svg">`;
+
+  // Check who win
+  let whowin;
   if (playerChoosed === computerChoosed) {
   } else if (
     (playerChoosed === 'rock' && computerChoosed === 'scissors') ||
@@ -48,7 +54,9 @@ function gemeLoop(item) {
   }
   txtRound.textContent = `Round ${++round}`;
 
+  // Check game next
   if (round === 5) {
+    // Finish Game Show who win
     const gemeSection = document.getElementById('game-section');
     const scoreSection = document.getElementById('score-section');
     setTimeout(() => {
@@ -77,6 +85,7 @@ function gemeLoop(item) {
       gemeSection.append(btnReload);
     }, 3000);
   } else {
+    // Clear Game for game next
     setTimeout(() => {
       img.remove();
       btnRock.style.display = '';
