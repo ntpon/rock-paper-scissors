@@ -72,7 +72,9 @@ function gemeLoop(playerChoosed) {
       btnReload.addEventListener('click', () => {
         window.location.reload();
       });
+
       let whoWin;
+
       if (playerPoint === computerPoint) {
         whoWin = `<h3 class="finish-game">Draw....</h3>`;
       } else if (playerPoint > computerPoint) {

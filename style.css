@@ -20,7 +20,7 @@ body {
 
 .main-heading {
   text-align: center;
-  font-size: 80px;
+  font-size: 50px;
 }
 
 .container {
@@ -42,7 +42,7 @@ body {
   width: 100%;
   padding: 10px 20px;
   margin: 0 50px;
-  height: 450px;
+  height: 350px;
 }
 
 header {
@@ -51,16 +51,16 @@ header {
 }
 .round {
   padding-top: 10px;
-  font-size: 40px;
+  font-size: 30px;
 }
 .score-section {
   border-bottom: 5px solid red;
   width: 100%;
   text-align: center;
-  font-size: 50px;
+  font-size: 35px;
 }
 .txt-whowin {
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
 }
 .items {
